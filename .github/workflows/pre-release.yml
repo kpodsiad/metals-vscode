@@ -10,6 +10,7 @@ jobs:
     if: |
       github.event.author.email != 'bot@scalameta.org' &&
       !contains(github.event.commits.*.message, 'scalameta/dependabot/') &&
+
       !contains(github.event.commits.*.message, 'dependabot[bot]') &&
       !contains(github.event.author.email, 'dependabot[bot]@users.noreply.github.com') &&
       !contains(github.event.commits.*.message, '[skip pre]') &&
